@@ -3,7 +3,9 @@
 int main(){
     
     printf("ASCII Table (0-127):\n");
+    gatch();
     printf("-------------------\n");
+
     printf("Decimal\tCharacter\n");
 
     for (int i = 0; i <= 127; i++) {
