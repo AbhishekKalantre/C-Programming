@@ -1,32 +1,19 @@
 #include<stdio.h>
- 
- 
-    unsigned long long functorial(int n)
-    {
-            if (n == 0 || n == 1)
-    {
+
+int factorial(int n) {
+    if (n == 0)
         return 1;
-    }
-    return n* factorial(n - 1);
-
- }
-
- int main (){
-    int num;
-
-    printf("Enter a positive number :");
-    scanf("%d", &num);
-
-    if (num < 0)
-    {
-        printf("factorial is not definde for nagative number.\n");
-
-
-    }
     else
-    {
-        printf("factorial of %d is %llu\n",num , factorial(num));
+        return n * factorial(n - 1);
+}
 
-    }
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Factorial of %d is %d\n", num, factorial(num));
     return 0;
- }
+}
+//output
+// Enter a number: 10   
+// Factorial of 10 is 3628800
